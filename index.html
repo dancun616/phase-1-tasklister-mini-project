@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flatiron Task Lister</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="main-content">
+    <h1>Task Lister Lite™️</h1>
+
+    <form id="create-task-form" action="" method="POST">
+      <label for="user">Username:</label>
+      <input type="text" id="user" placeholder="Enter UserName" required><br><br>
+      <label for="new-task-description">Task description:</label>
+      <input type="text" id="new-task-description" name="new-task-description" placeholder="description" required><br><br>      
+      <label for="priority">Set priority:</label>
+      <select id="priority">
+        <optgroup label="Priority"> 
+        <option value="High priority">High priority</option>
+        <option value="Medium priority">Medium priority</option>
+        <option value="Low priority">Low priority</option>
+        </optgroup>
+      </select><br><br>
+      <label for="Duration">Duration:</label>
+      <input type="number" id="hours" placeholder="" min="0" max="24" required>      <label for="hours">Hrs</label>
+      <input type="number" id="minutes" placeholder="" min="1" max="60" required>       <label for="hours">Min</label> <br><br>
+      <label for="due">Due date:</label>
+      <input type="date" id="dueDate" required><br><br>
+      <input type="submit" value="Create New Task">
+    </form>
+
+    <div id="list">
+      <h2>My Todos</h2>
+      <ul id="tasks">
+        <div id="high"></div>
+        <div id="medium"></div>
+        <div id="low"></div>
+      </ul>
+    </div>
+
+    <script src="./src/index.js"></script>
+  </div>
+
+</body>
+</html>
+
